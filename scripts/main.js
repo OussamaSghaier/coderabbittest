@@ -1,5 +1,11 @@
 const configPath = 'config/site.json';
 
+/**
+ * Load and return the site configuration JSON from the configured path.
+ *
+ * @returns {Object} The parsed configuration object.
+ * @throws {Error} If the HTTP response is not OK; error message includes the response status.
+ */
 async function loadConfig() {
   const response = await fetch(configPath);
   if (!response.ok) {
@@ -8,6 +14,12 @@ async function loadConfig() {
   return response.json();
 }
 
+/**
+ * Create an anchor element configured to open an external link in a new tab.
+ * @param {string} label - Text content for the link.
+ * @param {string} url - Destination URL for the link.
+ * @returns {HTMLAnchorElement} An `<a>` element with its text set to `label`, `href` set to `url`, `target="_blank"`, and `rel="noopener noreferrer"`.
+ */
 function createLink(label, url) {
   const anchor = document.createElement('a');
   anchor.textContent = label;
@@ -17,6 +29,22 @@ function createLink(label, url) {
   return anchor;
 }
 
+/**
+ * Populate the profile section of the page using the provided profile data.
+ *
+ * Updates DOM elements with IDs: `profile-avatar`, `profile-name`, `profile-tagline`,
+ * `profile-location`, `profile-about`, `profile-affiliations`, and `profile-email`.
+ * If `profile.avatar` is not provided, the avatar element is removed.
+ *
+ * @param {Object} profile - Profile data to render.
+ * @param {string} [profile.avatar] - URL of the avatar image; if absent the avatar element is removed.
+ * @param {string} profile.name - Display name.
+ * @param {string} profile.tagline - Short tagline or subtitle.
+ * @param {string} profile.location - Location text.
+ * @param {string} profile.about - About/biography text.
+ * @param {string[]} profile.affiliations - Array of affiliation strings to render as items.
+ * @param {string} profile.email - Email address used for the mailto link and link text.
+ */
 function populateProfile(profile) {
   const avatar = document.getElementById('profile-avatar');
   if (profile.avatar) {
@@ -40,6 +68,12 @@ function populateProfile(profile) {
   emailLink.textContent = profile.email;
 }
 
+/**
+ * Populate the social-links container with anchor elements for each provided link.
+ *
+ * Clears the container with id "social-links" then appends a pill-styled anchor for each link.
+ * @param {Array<{label: string, url: string}>} links - Array of objects where `label` is the link text and `url` is the destination URL.
+ */
 function populateSocialLinks(links) {
   const container = document.getElementById('social-links');
   container.innerHTML = '';
@@ -50,6 +84,14 @@ function populateSocialLinks(links) {
   });
 }
 
+/**
+ * Render research focus areas into the #research-focus-list container as cards.
+ * 
+ * Clears any existing content in the container and appends one card per focus area,
+ * each containing a title and description.
+ * 
+ * @param {Array<{title: string, description: string}>} focusAreas - Array of focus area objects; each object must have a `title` and a `description` string.
+ */
 function populateResearchFocus(focusAreas) {
   const container = document.getElementById('research-focus-list');
   container.innerHTML = '';
@@ -64,6 +106,13 @@ function populateResearchFocus(focusAreas) {
   });
 }
 
+/**
+ * Populate the spotlight section of the page with a title and description.
+ *
+ * If `spotlight` is falsy, the function leaves the spotlight section unchanged.
+ *
+ * @param {{title: string, description: string}|null|undefined} spotlight - Object containing `title` and `description` to render in the spotlight area.
+ */
 function populateSpotlight(spotlight) {
   if (!spotlight) return;
   const container = document.getElementById('spotlight');
@@ -73,6 +122,10 @@ function populateSpotlight(spotlight) {
   `;
 }
 
+/**
+ * Render a list of news items into the page's news list container.
+ * @param {Array<{date: string, detail: string}>} news - Array of news objects; each object should have a `date` string and a `detail` string to display.
+ */
 function populateNews(news) {
   const container = document.getElementById('news-list');
   container.innerHTML = '';
@@ -87,6 +140,10 @@ function populateNews(news) {
   });
 }
 
+/**
+ * Populate the #projects-list element with project cards containing title, summary, and link pills.
+ * @param {Array<{name: string, summary: string, links: Array<{label: string, url: string}>}>} projects - Array of project objects to render. Each project must include a `name`, `summary`, and a `links` array of `{label, url}` entries.
+ */
 function populateProjects(projects) {
   const container = document.getElementById('projects-list');
   container.innerHTML = '';
@@ -105,6 +162,21 @@ function populateProjects(projects) {
   });
 }
 
+/**
+ * Populate the publications list in the DOM from an array of publication objects.
+ *
+ * Replaces the contents of the element with id "publications-list" with article entries for each publication.
+ * Each publication object should include title, authors, venue, year, and links; links are rendered as pill anchors.
+ *
+ * @param {Array<Object>} publications - Array of publication objects.
+ * @param {string} publications[].title - Publication title.
+ * @param {string[]} publications[].authors - Array of author names.
+ * @param {string} publications[].venue - Venue or journal name.
+ * @param {number|string} publications[].year - Publication year.
+ * @param {Array<Object>} publications[].links - Array of link objects for the publication.
+ * @param {string} publications[].links[].label - Link label text.
+ * @param {string} publications[].links[].url - Link URL.
+ */
 function populatePublications(publications) {
   const container = document.getElementById('publications-list');
   container.innerHTML = '';
@@ -125,6 +197,15 @@ function populatePublications(publications) {
   });
 }
 
+/**
+ * Populate the teaching list section with entries for each teaching record.
+ * 
+ * @param {Array<Object>} teaching - Array of teaching records to render. Each record should include:
+ *   - course: The course name or title.
+ *   - role: The role held (e.g., "Instructor", "TA").
+ *   - institution: The institution where the course was taught.
+ *   - year: The year (or year range) the course was taught.
+ */
 function populateTeaching(teaching) {
   const container = document.getElementById('teaching-list');
   container.innerHTML = '';
@@ -139,6 +220,17 @@ function populateTeaching(teaching) {
   });
 }
 
+/**
+ * Render a list of timeline entries into the element with id "timeline-list".
+ *
+ * Clears any existing content in the timeline list and appends a DOM entry for each item.
+ *
+ * @param {Array<Object>} entries - Array of timeline entry objects.
+ *   Each object should have:
+ *     - {string} period - The date or period to display.
+ *     - {string} role - The role or title to display.
+ *     - {string} organization - The organization name to display (rendered muted).
+ */
 function populateTimeline(entries) {
   const container = document.getElementById('timeline-list');
   container.innerHTML = '';
@@ -153,11 +245,23 @@ function populateTimeline(entries) {
   });
 }
 
+/**
+ * Update the element with id "footer-year" to show the current calendar year.
+ *
+ * Locates the DOM element with id "footer-year" and sets its text content to the current year.
+ */
 function setFooterYear() {
   const footerYear = document.getElementById('footer-year');
   footerYear.textContent = new Date().getFullYear();
 }
 
+/**
+ * Initialize the page by loading site configuration and populating all UI sections.
+ *
+ * Loads the site configuration and invokes the various population helpers (profile, social links,
+ * research focus, spotlight, news, projects, publications, teaching, timeline) and sets the footer year.
+ * On failure to load configuration, logs the error and replaces the main content with a generic error message.
+ */
 async function bootstrap() {
   try {
     const config = await loadConfig();
