@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oussama Sghaier — Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="profile" id="profile">
+          <div class="avatar-frame">
+            <img id="profile-avatar" alt="Portrait of Oussama Sghaier" />
+          </div>
+          <h1 id="profile-name"></h1>
+          <p class="tagline" id="profile-tagline"></p>
+          <p class="location" id="profile-location"></p>
+          <div class="affiliations" id="profile-affiliations"></div>
+          <a class="contact-button" id="profile-email" href="#">Email</a>
+          <nav class="social-links" id="social-links"></nav>
+        </div>
+      </aside>
+      <main class="content">
+        <section class="intro" id="intro">
+          <h2>About</h2>
+          <p id="profile-about"></p>
+        </section>
+
+        <section class="section" id="research-focus">
+          <h2>Research Focus</h2>
+          <div class="card-grid" id="research-focus-list"></div>
+        </section>
+
+        <section class="section spotlight" id="spotlight"></section>
+
+        <section class="section" id="news">
+          <div class="section-header">
+            <h2>News</h2>
+            <span class="section-subtitle">Latest updates</span>
+          </div>
+          <div class="timeline" id="news-list"></div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-header">
+            <h2>Selected Projects</h2>
+            <span class="section-subtitle">Snapshots of current work</span>
+          </div>
+          <div class="card-grid" id="projects-list"></div>
+        </section>
+
+        <section class="section" id="publications">
+          <div class="section-header">
+            <h2>Publications</h2>
+            <span class="section-subtitle">Recent highlights</span>
+          </div>
+          <div class="stack" id="publications-list"></div>
+        </section>
+
+        <section class="section" id="teaching">
+          <div class="section-header">
+            <h2>Teaching</h2>
+          </div>
+          <div class="stack" id="teaching-list"></div>
+        </section>
+
+        <section class="section" id="timeline">
+          <div class="section-header">
+            <h2>Journey</h2>
+            <span class="section-subtitle">Education & Experience</span>
+          </div>
+          <div class="timeline" id="timeline-list"></div>
+        </section>
+
+        <footer class="footer">
+          <p>&copy; <span id="footer-year"></span> Oussama Sghaier. Built with love and curiosity.</p>
+        </footer>
+      </main>
+    </div>
+    <script src="scripts/main.js" type="module"></script>
+  </body>
+</html>
