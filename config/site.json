@@ -1,0 +1,130 @@
+{
+  "profile": {
+    "name": "Oussama Sghaier",
+    "tagline": "Researcher in Computer Vision & Autonomous Systems",
+    "location": "Toulouse, France",
+    "email": "oussama.sghaier@domain.com",
+    "affiliations": [
+      "Robotics & Computer Vision Lab, University of Toulouse",
+      "INRIA Sophia Antipolis"
+    ],
+    "about": "I am a researcher focusing on perception algorithms for autonomous aerial vehicles. My work spans 3D reconstruction, scene understanding, and collaborative robotics with an emphasis on real-world deployment.",
+    "avatar": "assets/avatar.svg"
+  },
+  "socialLinks": [
+    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=XXXX" },
+    { "label": "GitHub", "url": "https://github.com/oussamasghaier" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/oussamasghaier" },
+    { "label": "Twitter", "url": "https://twitter.com/oussamasghaier" }
+  ],
+  "researchFocus": [
+    {
+      "title": "Aerial Perception",
+      "description": "Developing robust perception pipelines for autonomous drones operating in cluttered environments using multi-modal sensing."
+    },
+    {
+      "title": "Collaborative Robotics",
+      "description": "Designing algorithms that enable seamless human-robot teaming for infrastructure inspection and disaster response."
+    },
+    {
+      "title": "3D Reconstruction",
+      "description": "Building scalable 3D reconstruction systems that combine classical geometry with modern deep learning representations."
+    }
+  ],
+  "spotlight": {
+    "title": "Spotlight",
+    "description": "Our recent paper on self-supervised scene completion for aerial robots received the Best Paper Award at ICRA 2024."
+  },
+  "news": [
+    {
+      "date": "Apr 2024",
+      "detail": "Presented our work on self-supervised scene completion at ICRA 2024 in Yokohama, Japan."
+    },
+    {
+      "date": "Jan 2024",
+      "detail": "Started a research residency at INRIA Sophia Antipolis focusing on collaborative perception."
+    },
+    {
+      "date": "Sep 2023",
+      "detail": "Organized the workshop on Aerial Robots for Inspection at IROS 2023."
+    }
+  ],
+  "projects": [
+    {
+      "name": "SceneForge",
+      "summary": "A self-supervised framework that fuses LiDAR and RGB data to complete complex outdoor scenes in real-time.",
+      "links": [
+        { "label": "Paper", "url": "https://arxiv.org/abs/xxx" },
+        { "label": "Code", "url": "https://github.com/oussamasghaier/sceneforge" }
+      ]
+    },
+    {
+      "name": "AeroTwin",
+      "summary": "A drone-based digital twin system for large-scale infrastructure inspection with adaptive path planning.",
+      "links": [
+        { "label": "Project Page", "url": "https://oussamasghaier.github.io/aerotwin" }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Self-Supervised Scene Completion for Aerial Robots",
+      "authors": ["O. Sghaier", "M. Dupont", "L. Zhao", "F. Martin"],
+      "venue": "IEEE International Conference on Robotics and Automation (ICRA)",
+      "year": 2024,
+      "links": [
+        { "label": "Paper", "url": "https://arxiv.org/abs/xxx" },
+        { "label": "Video", "url": "https://youtu.be/xxxx" }
+      ]
+    },
+    {
+      "title": "Cross-Modal 3D Reconstruction for Autonomous Inspection",
+      "authors": ["O. Sghaier", "A. Martin", "C. Lopez"],
+      "venue": "International Journal of Computer Vision",
+      "year": 2023,
+      "links": [
+        { "label": "Paper", "url": "https://doi.org/xx.xxxx/ijcv.2023.xxxx" }
+      ]
+    },
+    {
+      "title": "Collaborative Aerial-Ground Mapping",
+      "authors": ["O. Sghaier", "P. Mendes", "J. Rossi"],
+      "venue": "IEEE Robotics and Automation Letters",
+      "year": 2022,
+      "links": [
+        { "label": "Paper", "url": "https://doi.org/xx.xxxx/ral.2022.xxxx" }
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Computer Vision for Robotics",
+      "role": "Lecturer",
+      "institution": "University of Toulouse",
+      "year": "2023"
+    },
+    {
+      "course": "Autonomous Systems Lab",
+      "role": "Teaching Assistant",
+      "institution": "INSA Lyon",
+      "year": "2022"
+    }
+  ],
+  "timeline": [
+    {
+      "period": "2023 — Present",
+      "role": "Postdoctoral Researcher",
+      "organization": "University of Toulouse"
+    },
+    {
+      "period": "2018 — 2023",
+      "role": "Ph.D. in Computer Vision",
+      "organization": "INSA Lyon"
+    },
+    {
+      "period": "2016 — 2018",
+      "role": "M.Sc. in Robotics",
+      "organization": "University of Toulon"
+    }
+  ]
+}
