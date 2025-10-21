@@ -1,6 +1,6 @@
 # Oussama Sghaier — Research Portfolio
 
-This repository contains a lightweight, configuration-driven personal website tailored for research profiles. All content is now scattered across YAML files (plus one BibTeX file) so updates can be made without touching the layout or styles.
+This repository contains a lightweight, configuration-driven personal website tailored for research profiles. All content is defined in JSON files so updates can be made without touching the layout or styles.
 
 ## Structure
 
@@ -10,23 +10,21 @@ This repository contains a lightweight, configuration-driven personal website ta
 │   ├── styles.css      # Global styling
 │   └── avatar.svg      # Placeholder avatar (replace with your own)
 ├── config/
-│   ├── site.yml        # Basic profile, sections, and subtitles
-│   ├── news.yml        # Simple list of news entries
-│   ├── projects.yml    # Selected project blurbs with links
-│   └── publications.bib# BibTeX snippets for highlighted work
+│   └── site.json       # Central content configuration
 └── scripts/
     └── main.js         # Populates the page from the configuration
 ```
 
 ## Editing Your Content
 
-1. Update **`config/site.yml`** with your information. Everything is dumped into top-level keys: `name`, `tagline`, `about`, `affiliations`, `email`, `socialLinks`, `researchFocus`, `spotlight`, subtitles, `teaching`, and `timeline`.
-2. Add or remove lines in **`config/news.yml`** to manage the timeline-style news feed (`date` + `detail`).
-3. Add more entries to **`config/projects.yml`** for featured work. Each item accepts `name`, `summary`, and `links`.
-4. Paste BibTeX records into **`config/publications.bib`**. The loader scrapes `title`, `author`, `journal`/`booktitle`, `year`, and `url` fields.
-5. Optionally replace **`assets/avatar.svg`** with a personal photo and update the `avatar` path inside `config/site.yml`.
+1. Update **`config/site.json`** with your information:
+   - `profile`: name, tagline, contact details, affiliations, and bio text.
+   - `socialLinks`: external profiles (Google Scholar, GitHub, etc.).
+   - `researchFocus`, `projects`, `publications`, `teaching`, and `timeline`: arrays describing each section.
+   - `spotlight` and `news`: highlight current achievements and announcements.
+2. Optionally replace **`assets/avatar.svg`** with a personal photo and update the `profile.avatar` path.
 
-Changes to any YAML or BibTeX file are reflected immediately when you reload the page—no build step required, and no validation either.
+Changes to `site.json` are reflected immediately when you reload the page—no build step required.
 
 ## Running Locally
 
