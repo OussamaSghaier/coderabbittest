@@ -1,0 +1,55 @@
+name: Oussama Sghaier
+tagline: AI Researcher & Engineer
+location: Paris, France
+avatar: assets/avatar.svg
+about: >-
+  I explore the messy middle ground between machine intelligence, interactive systems,
+  and teaching. My work spans scientific research and engineering practice with
+  collaborators across academia and industry.
+affiliations:
+  - Institut Polytechnique de Paris
+  - Centre for Research on AI Systems
+  - Open Collaboration Lab
+email: hello@oussamasghaier.com
+socialLinks:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=example
+  - label: GitHub
+    url: https://github.com/oussamasghaier
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/oussamasghaier
+researchFocus:
+  - title: Trustworthy AI
+    description: Designing evaluation loops that expose how models behave in the real world.
+  - title: Human-Centered Tools
+    description: Building prototypes that help researchers interrogate and steer complex systems.
+  - title: Responsible Deployment
+    description: Translating research into production with an eye for governance and safety.
+spotlight:
+  title: Looking for collaborators
+  description: Always happy to chat about applied ML, interactive demos, and joint workshops.
+projectsSubtitle: Hacky explorations that somehow shipped.
+publicationsSubtitle: Selected highlights parsed from a chaotic .bib file.
+teaching:
+  - course: Introduction to Machine Learning
+    role: Instructor
+    institution: Polytechnique Executive Education
+    year: 2024
+  - course: Responsible AI Engineering
+    role: Teaching Assistant
+    institution: CentraleSupélec
+    year: 2023
+  - course: Data Products Studio
+    role: Lecturer
+    institution: ENSAE
+    year: 2022
+timeline:
+  - period: 2023 — Present
+    role: Senior Research Engineer
+    organization: AI Safety Collective
+  - period: 2020 — 2023
+    role: Research Scientist
+    organization: Responsible AI Lab
+  - period: 2018 — 2020
+    role: MSc Artificial Intelligence
+    organization: Sorbonne University
