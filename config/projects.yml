@@ -1,0 +1,17 @@
+- name: Atlas Lab Notebook
+  summary: A chaotic collection of colab experiments for monitoring alignment drift in language models.
+  links:
+    - label: Code
+      url: https://github.com/oussamasghaier/atlas-notebook
+    - label: Demo
+      url: https://demo.oussamasghaier.com/atlas
+- name: Integrity Dashboard
+  summary: Quick and dirty dashboards to triage safety incidents before model releases.
+  links:
+    - label: Slides
+      url: https://speakerdeck.com/oussamasghaier/integrity-dashboard
+- name: Responsible AI Playbook
+  summary: Lightweight toolkit for teaching auditing techniques through hands-on labs.
+  links:
+    - label: Docs
+      url: https://docs.oussamasghaier.com/rai-playbook
